@@ -1,13 +1,14 @@
 *,
 *::after,
 *::before {
-    box-sizing: border-box;
-    margin: 0 0;
-    padding: 0 0;
+  box-sizing: border-box;
+  margin: 0 0;
+  padding: 0 0;
 }
 
 /* Fill the whole page */
-html, body {
+html,
+body {
   min-height: 100%;
 }
 
@@ -15,55 +16,11 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* The Modal (background) */
-.modal {
-  display: none;
-  /* Hidden by default */
-  position: fixed;
-  /* Stay in place */
-  z-index: 1;
-  /* Sit on top */
-  padding-top: 100px;
-  /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100%;
-  /* Full width */
-  height: 100%;
-  /* Full height */
-  overflow: auto;
-  /* Enable scroll if needed */
-  background-color: rgb(0, 0, 0);
-  /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.4);
-  /* Black w/ opacity */
-}
-
-/* Modal Content */
-.modal-content {
-  background-color: #fefefe;
-  margin: auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
-}
-
-/* The Close Button */
-.close {
-  color: #aaaaaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
-}
-
 body {
+  background: #000;
+}
+
+#four {
   background: #ddd;
 }
 
@@ -75,14 +32,15 @@ body {
   left: 0;
   right: 0;
   margin: auto;
-  --video-width: 80vw;
+  --video-width: 100vw;
   width: var(--video-width);
-  height: calc(var(--video-width) / 1.77);
+  /* height: calc(var(--video-width) / 1.77); */
+  height: 100vh;
 }
 
 .video-button {
   cursor: pointer;
-  clip-path: polygon(30% 20%, 70% 20%, 70% 80%, 30% 80%);
+  clip-path: polygon(20% 20%, 80% 20%, 80% 80%, 20% 80%);
   transition: 0.6s cubic-bezier(0.6, 0, 0.4, 1);
 }
 
@@ -112,7 +70,8 @@ body {
 
 .play-button__aperture--left {
   position: absolute;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(98, 176, 186, 0.9);
+  /* #62B0BA */
   transition: 0.5s 0.1s cubic-bezier(0.6, 0, 0.4, 1);
   top: 0;
   left: 0;
@@ -131,7 +90,7 @@ body {
 
 .play-button__aperture--top-right {
   position: absolute;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 142, 60, 0.9);
   transition: 0.5s 0.1s cubic-bezier(0.6, 0, 0.4, 1);
   top: 0;
   left: 0;
@@ -150,7 +109,7 @@ body {
 
 .play-button__aperture--bottom-right {
   position: absolute;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(217, 55, 110, 0.9);
   transition: 0.5s 0.1s cubic-bezier(0.6, 0, 0.4, 1);
   top: 0;
   left: 0;
@@ -206,4 +165,74 @@ body {
 
 .navbar-button-name {
   padding-right: 4px;
+  color: #fff;
+}
+
+.hoverinfo {
+  position: 50%;
+}
+
+/* Typewriter by Coding in Public (Chris Pennington)
+Source: https://codepen.io/Coding-in-Public/pen/yLPYjrv */
+
+.typewriter-container {
+  height: 100vh;
+}
+
+[data-typewriter] {
+  font-family: system-UI;
+  font-weight: bold;
+  font-size: 4.5rem;
+  color: #d9376e;
+  height: 6rem;
+  border-right: 0.8rem solid transparent;
+  padding: 0.6rem;
+}
+
+.your-way {
+  font-family: system-UI;
+  font-weight: bold;
+  color: #fdfdf8;
+  font-size: 4.5rem;
+  height: 6rem;
+  border-right: 0.8rem solid transparent;
+  padding: 0.6rem;
+}
+
+.read-our-stories {
+  height: 100vh;
+  font-family: system-UI;
+  font-weight: bold;
+  color: #fdfdf8;
+  font-size: 4.5rem;
+  border-right: 0.8rem solid transparent;
+  padding-right: 5rem;
+  padding-left: 0.6rem;
+  padding-top: 8.9rem;
+  padding-bottom: 0.6rem;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+#three {
+  background-image: url('/images/group.webp');
+  background-size: cover;
+  background-position: center;
+}
+
+[data-typewriter]:not(.typing) {
+  animation: blink-cursor 0.5s step-end infinite;
+}
+
+@keyframes blink-cursor {
+
+  0%,
+  100% {
+    border-color: transparent;
+  }
+
+  50% {
+    border-color: #ff8e3c;
+  }
 }
