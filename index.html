@@ -31,15 +31,22 @@
     </div>
 
     <section id="one">
-      <div class="video-button" data-aperture="closed">
+      <div class="video-button" id="video-button" data-aperture="closed">
         <div class="video-container">
-         
-          <video class="actual-video" src="video/webdoc.mp4">
+
+          <video class="actual-video" id="actual-video" src="video/webdoc.mp4">
           </video>
           <div class="play-button__aperture--left"></div>
           <div class="play-button__aperture--top-right"></div>
           <div class="play-button__aperture--bottom-right"></div>
         </div>
+      </div>
+      <div class="auto-arrows" id="auto-arrows1">
+        <svg class="arrows">
+          <path class="a1" d="M0 0 L30 32 L60 0"></path>
+          <path class="a2" d="M0 20 L30 52 L60 20"></path>
+          <path class="a3" d="M0 40 L30 72 L60 40"></path>
+        </svg>
       </div>
     </section>
     <section id="two">

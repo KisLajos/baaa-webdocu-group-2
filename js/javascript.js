@@ -137,3 +137,39 @@ new Typewriter(
         repeat: true
     }
 )
+
+/* Handling scrolling out of the video */
+
+let observer = new IntersectionObserver((entries, observer) => {
+    for (const entry of entries) {
+        if (entry.isIntersecting) {
+            document.getElementById("video-button").dataset.aperture = 'closed';
+            let video = document.getElementById("actual-video");
+            video.pause();
+            video.progress = 0;
+
+            if (document.getElementById('auto-arrows1').style.display = "block") {
+                document.getElementById('auto-arrows1').style.display = "none";
+            }
+
+            console.log(entry.target.id);
+        }
+        else {
+            console.log('not intersecting')
+        }
+    };
+}, { threshold: 1 });
+
+const sections = document.getElementsByClassName("docSlider-scroll");
+for (const section of sections) {
+    observer.observe(section)
+}
+
+/* Scroll arrows appear when the video has ended */
+
+const video = document.getElementById("actual-video");
+
+video.addEventListener('ended', (event) => {
+    console.log('Video reached its end.');
+    document.getElementById('auto-arrows1').style.display = "block";
+});

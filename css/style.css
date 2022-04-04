@@ -79,6 +79,7 @@ Source: https://codepen.io/ericdjohnson/pen/bKVxem */
   width: 100%;
   height: 100%;
   clip-path: polygon(0% 0%, 40% 0%, 40% 100%, 0% 100%);
+  animation: pulse-blue 1.5s infinite;
 }
 
 [data-aperture="open"] .play-button__aperture--left {
@@ -87,6 +88,20 @@ Source: https://codepen.io/ericdjohnson/pen/bKVxem */
 
 [data-aperture="open"] .play-button__aperture--left {
   clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%);
+}
+
+@keyframes pulse-blue {
+  0% {
+    transform: scale(0.95);
+  }
+  
+  70% {
+    transform: scale(1);
+  }
+  
+  100% {
+    transform: scale(0.95);
+  }
 }
 
 .play-button__aperture--top-right {
@@ -98,6 +113,7 @@ Source: https://codepen.io/ericdjohnson/pen/bKVxem */
   width: 100%;
   height: 100%;
   clip-path: polygon(0% 0%, 100% 0%, 100% 80%);
+  animation: pulse-orange 1.5s infinite;
 }
 
 [data-aperture="open"] .play-button__aperture--top-right {
@@ -106,6 +122,20 @@ Source: https://codepen.io/ericdjohnson/pen/bKVxem */
 
 [data-aperture="open"] .play-button__aperture--top-right {
   clip-path: polygon(100% 0%, 100% 0%, 100% 0%);
+}
+
+@keyframes pulse-orange {
+  0% {
+    transform: scale(0.95);
+  }
+  
+  70% {
+    transform: scale(1);
+  }
+  
+  100% {
+    transform: scale(0.95);
+  }
 }
 
 .play-button__aperture--bottom-right {
@@ -117,6 +147,7 @@ Source: https://codepen.io/ericdjohnson/pen/bKVxem */
   width: 100%;
   height: 100%;
   clip-path: polygon(0% 100%, 100% 100%, 100% 20%);
+  animation: pulse-purple 1.5s infinite;
 }
 
 [data-aperture="open"] .play-button__aperture--bottom-right {
@@ -125,6 +156,20 @@ Source: https://codepen.io/ericdjohnson/pen/bKVxem */
 
 [data-aperture="open"] .play-button__aperture--bottom-right {
   clip-path: polygon(100% 100%, 100% 100%, 100% 100%);
+}
+
+@keyframes pulse-purple {
+  0% {
+    transform: scale(0.95);
+  }
+  
+  70% {
+    transform: scale(1);
+  }
+  
+  100% {
+    transform: scale(0.95);
+  }
 }
 
 .main-grid {
@@ -160,6 +205,10 @@ Source: https://codepen.io/ericdjohnson/pen/bKVxem */
 
 .jcc {
   justify-content: center;
+}
+
+.fxdc {
+  flex-direction: column;
 }
 
 .navbar-button-name {
@@ -205,9 +254,9 @@ Source: https://codepen.io/Coding-in-Public/pen/yLPYjrv */
   color: #fdfdf8;
   font-size: 4.5rem;
   border-right: 0.8rem solid transparent;
-  padding-right: 5rem;
+  padding-right: 7rem;
   padding-left: 0.6rem;
-  padding-top: 8.9rem;
+  padding-top: 12.9rem;
   padding-bottom: 0.6rem;
   display: flex;
   justify-content: end;
