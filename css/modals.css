@@ -94,7 +94,7 @@
 
 .svg {
   stroke-dasharray: 1200;
-  animation: dash 8s linear alternate infinite;
+  animation: dash 8s linear alternate 1;
   width: 100%;
   display: flex;
   justify-content: center;

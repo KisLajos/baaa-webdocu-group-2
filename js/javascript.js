@@ -1,4 +1,12 @@
-console.log('hello world')
+/**-----------------------
+
+ docSlider.js - ver.3.0.1
+ URL : https://prjct-samwest.github.io/docSlider/
+ created by SamWest
+ Copyright (c) 2020 SamWest.
+ This plugin is released under the MIT License.
+
+ -----------------------**/
 
 docSlider.init({
     speed: 600,
@@ -7,6 +15,9 @@ docSlider.init({
     scrollReset: false,
     /* horizontal: true */
 });
+
+/* Datamaps by Mark DiMarco
+  Source: https://github.com/markmarkoh/datamaps */
 
 let current_country = ''
 

@@ -45,13 +45,15 @@
 /**------------------------------
   REWRITING IS NOT RECOMMENDED
  -----------------------------**/
-html, body {
+html,
+body {
   overflow: hidden;
   touch-action: none;
   height: 100%;
 }
 
-html, body,
+html,
+body,
 .docSlider,
 .docSlider-inner,
 .docSlider-page {
@@ -63,7 +65,8 @@ html, body,
   outline: none;
 }
 
-html:active, body:active,
+html:active,
+body:active,
 .docSlider:active,
 .docSlider-inner:active,
 .docSlider-page:active {
@@ -92,5 +95,5 @@ html:active, body:active,
   width: inherit;
   overflow: auto;
   position: absolute;
-  overflow-scrolling: touch;
+  /* overflow-scrolling: touch; */
 }
