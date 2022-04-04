@@ -254,7 +254,7 @@ Source: https://codepen.io/Coding-in-Public/pen/yLPYjrv */
   padding-top: 12.9rem;
   padding-bottom: 0.6rem;
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   align-items: center;
 }
 
