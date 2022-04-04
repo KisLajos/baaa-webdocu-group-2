@@ -4,7 +4,8 @@ docSlider.init({
     speed: 600,
     startSpeed: null,
     easing: 'ease',
-    scrollReset: false
+    scrollReset: false,
+    /* horizontal: true */
 });
 
 let current_country = ''
@@ -13,7 +14,7 @@ var map = new Datamap({
     element: document.getElementById('container'),
     projection: 'mercator',
     fills: {
-        defaultFill: "#ABDDA4",
+        defaultFill: "#62B0BA",
         authorHasTraveledTo: "#fa0fa0"
     },
     data: {
@@ -53,24 +54,9 @@ var map = new Datamap({
             let our_countries = ['CZE', 'DNK', 'GBR', 'HUN', 'POL'];
             if (our_countries.includes(geography.id)) {
                 current_country = geography.properties.name
-                console.log(current_country)
+                console.log(map)
 
-                // Grab the modal and display it
-                var modal = document.getElementById("myModal");
-                modal.style.display = "block";
-
-                // When the user clicks on <span> (x), close the modal
-                var span = document.getElementsByClassName("close")[0];
-                span.onclick = function () {
-                    modal.style.display = "none";
-                }
-
-                // When the user clicks anywhere outside of the modal, close it
-                window.onclick = function (event) {
-                    if (event.target == modal) {
-                        modal.style.display = "none";
-                    }
-                }
+                getPersonDetails(geography.id);
             }
         });
     }
@@ -97,3 +83,63 @@ document.querySelector('.video-button').addEventListener('click', function () {
         videoEl.play();
     }
 });
+
+/* Typewriter by Coding in Public (Chris Pennington)
+Source: https://codepen.io/Coding-in-Public/pen/yLPYjrv */
+class Typewriter {
+    constructor(element, options) {
+        this.element = element
+        this.words = [... this.element.dataset.typewriter.split(',')]
+        this.speed = options?.speed || 150
+        this.delay = options?.delay || 1500
+        this.repeat = options?.repeat
+        this.initTyping()
+    }
+
+    wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms))
+
+    toggleTyping = () => this.element.classList.toggle('typing')
+
+    async typewrite(word) {
+        await this.wait(this.delay) //wait a bit
+        this.toggleTyping() //remove blinking cursor
+        for (const letter of word.split('')) {
+            //add each letter based on the passed speed
+            this.element.textContent += letter
+            await this.wait(this.speed)
+        }
+        this.toggleTyping() //add back cursor
+        await this.wait(this.delay) //wait a bit
+        this.toggleTyping() //remove blinking cursor
+        while (this.element.textContent.length !== 0) {
+            //as long as there are letters in the word
+            //remove them one by one
+            this.element.textContent = this.element.textContent.slice(0, -1)
+            await this.wait(this.speed)
+        }
+        this.toggleTyping() //add back cursor
+    }
+
+    async initTyping() {
+        for (const word of this.words) {
+            await this.typewrite(word)
+        }
+
+        if (this.repeat) {
+            await this.initTyping()
+        }
+        else {
+            this.element.style.animation = 'none'
+        }
+    }
+}
+
+new Typewriter(
+    document.querySelector('[data-typewriter]'),
+
+    {
+        speed: 70,
+        delay: 500,
+        repeat: true
+    }
+)
