@@ -236,3 +236,84 @@ Source: https://codepen.io/Coding-in-Public/pen/yLPYjrv */
     border-color: #ff8e3c;
   }
 }
+
+/* SVG Arrows by junjun
+Source: https://codepen.io/postor/pen/vYpNYg */
+
+.arrows {
+  width: 60px;
+  height: 76px;
+  /* position: absolute; */
+  /* left: 50%; */
+  margin-left: -30px;
+  bottom: 20px;
+}
+
+.arrows path {
+  stroke: #fff;
+  fill: transparent;
+  stroke-width: 4px;
+  animation: arrow 2s infinite;
+  -webkit-animation: arrow 2s infinite;
+}
+
+@keyframes arrow {
+  0% {
+    opacity: 0
+  }
+
+  40% {
+    opacity: 1
+  }
+
+  80% {
+    opacity: 0
+  }
+
+  100% {
+    opacity: 0
+  }
+}
+
+/*Safari and Chrome*/
+@-webkit-keyframes arrow {
+  0% {
+    opacity: 0
+  }
+
+  40% {
+    opacity: 1
+  }
+
+  80% {
+    opacity: 0
+  }
+
+  100% {
+    opacity: 0
+  }
+}
+
+.arrows path.a1 {
+  animation-delay: -1s;
+  -webkit-animation-delay: -1s; /* Safari and Chrome */
+}
+
+.arrows path.a2 {
+  animation-delay: -0.5s;
+  -webkit-animation-delay: -0.5s; /* Safari and Chrome */
+}
+
+.arrows path.a3 {
+  animation-delay: 0s;
+  -webkit-animation-delay: 0s; /* Safari and Chrome */
+}
+
+.auto-arrows {
+  display: none;
+}
+
+.auto-arrows .arrows {
+  position: absolute;
+  left: 50%;
+}
