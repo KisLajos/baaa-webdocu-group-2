@@ -62,15 +62,8 @@ var map = new Datamap({
     }
 });
 
-/* const pol = document.getElementsByClassName('POL')
-console.log(pol)
-
-document.addEventListener('click', function (event) {
-    if (!event.target.closest('.POL')) return;
-    console.log('Clicked');
-}, false); */
-
-console.clear();
+/* Aperture video play button/reveal -- clip-path approach by Eric Johnson
+Source: https://codepen.io/ericdjohnson/pen/bKVxem */
 
 var videoEl = document.querySelector('video');
 document.querySelector('.video-button').addEventListener('click', function () {
@@ -86,6 +79,7 @@ document.querySelector('.video-button').addEventListener('click', function () {
 
 /* Typewriter by Coding in Public (Chris Pennington)
 Source: https://codepen.io/Coding-in-Public/pen/yLPYjrv */
+
 class Typewriter {
     constructor(element, options) {
         this.element = element
