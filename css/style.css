@@ -358,3 +358,24 @@ Source: https://codepen.io/postor/pen/vYpNYg */
   position: absolute;
   left: 50%;
 }
+
+@media screen and (max-width: 600px) {
+  .typewriter-container {
+    flex-direction: column;
+  }
+
+  .read-our-stories {
+    font-size: 4rem;
+    padding: 0 0;
+    align-items: flex-end;
+  }
+
+  #three {
+    background-position: 40% 75%;
+  }
+
+  .video-button, .video-container {
+    width: 100%;
+    height: 60%;
+  }
+}
