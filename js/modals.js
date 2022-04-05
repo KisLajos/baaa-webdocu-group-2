@@ -22,11 +22,11 @@ function getPersonDetails(countrycode) {
                   <span class="close">&times;</span>
                   <img class="img" src="/${person.image}" alt="img of a person">
                   <div class="info">
-                    <h1 class="name">${person.name}</h1>
-                    <p>
-                      age: ${person.age}<br>
-                      story: ${person.story}
-                    </p>
+                    <h1 class="name p-bottom-05">${person.name}</h1>
+                    <div class="modal-body">
+                      <p class="p-bottom-05">Age: ${person.age}</p>
+                      <p>Story: ${person.story}</p>
+                    </div>
                   </div>
                 </div>
                 
