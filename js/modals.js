@@ -14,6 +14,7 @@ function getPersonDetails(countrycode) {
 
       myModal.innerHTML = "";
       for (const person of countrylist) {
+        
         if (countrycode === person.countrycode) {
           template =
             `<!-- Modal content -->
@@ -25,7 +26,18 @@ function getPersonDetails(countrycode) {
                     <h1 class="name p-bottom-05">${person.name}</h1>
                     <div class="modal-body">
                       <p class="p-bottom-05">Age: ${person.age}</p>
-                      <p>Story: ${person.story}</p>
+                      <div>Story: 
+                      `
+                      for (const paragraph of person.story) {
+                        const entries = Object.entries(paragraph)
+                        for (const entry of entries) {
+                          template += `<p>${entry[1]}</p>`;
+                        }
+                      }
+
+                      template += `
+                      
+                      </div>
                     </div>
                   </div>
                 </div>
